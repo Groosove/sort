@@ -64,16 +64,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/arturlutfullin/Desktop/sort
+CMAKE_SOURCE_DIR = /Users/flavon/Desktop/vasilev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/arturlutfullin/Desktop/sort/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/flavon/Desktop/vasilev/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/sort.dir/all
+all: CMakeFiles/vasilev.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/sort.dir/clean
+clean: CMakeFiles/vasilev.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/sort.dir
+# Target rules for target CMakeFiles/vasilev.dir
 
 # All Build rule for target.
-CMakeFiles/sort.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arturlutfullin/Desktop/sort/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target sort"
-.PHONY : CMakeFiles/sort.dir/all
+CMakeFiles/vasilev.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vasilev.dir/build.make CMakeFiles/vasilev.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vasilev.dir/build.make CMakeFiles/vasilev.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/flavon/Desktop/vasilev/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target vasilev"
+.PHONY : CMakeFiles/vasilev.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/sort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arturlutfullin/Desktop/sort/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sort.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arturlutfullin/Desktop/sort/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/sort.dir/rule
+CMakeFiles/vasilev.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/flavon/Desktop/vasilev/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vasilev.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/flavon/Desktop/vasilev/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/vasilev.dir/rule
 
 # Convenience name for target.
-sort: CMakeFiles/sort.dir/rule
+vasilev: CMakeFiles/vasilev.dir/rule
 
-.PHONY : sort
+.PHONY : vasilev
 
 # clean rule for target.
-CMakeFiles/sort.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/clean
-.PHONY : CMakeFiles/sort.dir/clean
+CMakeFiles/vasilev.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vasilev.dir/build.make CMakeFiles/vasilev.dir/clean
+.PHONY : CMakeFiles/vasilev.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

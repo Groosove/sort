@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
-project(Google_tests)
+project(vasilev)
 
-add_executable(sort main.cpp)
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(vasilev main.cpp)
