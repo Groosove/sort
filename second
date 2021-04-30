@@ -1,0 +1,107 @@
+[32mTest number range(0...9)[0m
+Size = 100
+Bubble sort - 22
+Insertion sort - 5
+Choice sort - 11
+Shell sort - 5
+Merge sort - 9
+Heap sort - 9
+Radix sort - 2
+
+Size = 1000
+Bubble sort - 1916
+Insertion sort - 453
+Choice sort - 843
+Shell sort - 63
+Merge sort - 92
+Heap sort - 120
+Radix sort - 16
+
+Size = 10000
+Bubble sort - 258055
+Insertion sort - 47187
+Choice sort - 81325
+Shell sort - 842
+Merge sort - 1066
+Heap sort - 1420
+Radix sort - 164
+
+Size = 100000
+Bubble sort - 27079184
+Insertion sort - 4606566
+Choice sort - 7955483
+Shell sort - 9663
+Merge sort - 12353
+Heap sort - 16615
+Radix sort - 1638
+
+[32mTest number range(INT32_MIN...INT32_MAX)[0m
+Size = 100
+Bubble sort - 22
+Insertion sort - 6
+Choice sort - 12
+Shell sort - 6
+Merge sort - 8
+Heap sort - 10
+
+Size = 1000
+Bubble sort - 1975
+Insertion sort - 522
+Choice sort - 878
+Shell sort - 113
+Merge sort - 107
+Heap sort - 138
+
+Size = 10000
+Bubble sort - 265776
+Insertion sort - 52466
+Choice sort - 81203
+Shell sort - 1820
+Merge sort - 1339
+Heap sort - 1803
+
+Size = 100000
+Bubble sort - 27667269
+Insertion sort - 5098123
+Choice sort - 8017946
+Shell sort - 24878
+Merge sort - 15969
+Heap sort - 22688
+
+[32mTest char range(97...122)[0m
+Size = 100
+Bubble sort - 22
+Insertion sort - 6
+Choice sort - 10
+Shell sort - 6
+Merge sort - 8
+Heap sort - 8
+Radix sort - 4
+
+Size = 1000
+Bubble sort - 1770
+Insertion sort - 504
+Choice sort - 772
+Shell sort - 79
+Merge sort - 90
+Heap sort - 117
+Radix sort - 43
+
+Size = 10000
+Bubble sort - 260911
+Insertion sort - 49188
+Choice sort - 78051
+Shell sort - 1050
+Merge sort - 1062
+Heap sort - 1452
+Radix sort - 444
+
+Size = 100000
+Bubble sort - 27258928
+Insertion sort - 4944856
+Choice sort - 8032927
+Shell sort - 11507
+Merge sort - 11963
+Heap sort - 16498
+Radix sort - 4348
+

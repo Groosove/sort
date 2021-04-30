@@ -1,8 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
+#include <random>
 #define RESET   "\033[0m"
 #define GREEN   "\033[32m"
 #define RED   "\033[31m"
+
 namespace ft {
 	int getRandomNumber(int min, int max) {
 		static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);
@@ -60,30 +63,10 @@ namespace ft {
 	template <typename T>
 	int getMax(T *arr, size_t size) {
 		T max = arr[0];
-		for (int i = 1; i < size; i++)
+		for (int i = 1; i < (int)size; i++)
 			if (arr[i] > max)
 				max = arr[i];
 		return max;
-	}
-	template <typename T>
-	void count_sort(T* arr, size_t size) {
-		T min, max;
-		max = min = arr[0];
-		for (size_t i = 1; i < size; i++) {
-			if (arr[i] < min)
-				min = arr[i];
-			if (arr[i] > max)
-				max = arr[i];
-		}
-		size_t count_size = max - min + 1;
-		T *counts = new T[count_size];
-		std::memset(counts, 0, count_size - 1);
-		for (size_t i = 0; i < size; i++)
-			counts[arr[i] - min]++;
-		size_t index = 0;
-		for (size_t i = 0; i < count_size; i++)
-			for (size_t j = 0; j < counts[i]; j++)
-				arr[index++] = i + min;
 	}
 	template <typename T>
 	void shell_sort(T *arr, size_t size) {
@@ -179,21 +162,21 @@ namespace ft {
 			countSort(arr, size, exp);
 	}
 	template <typename T>
-	clock_t check_time(T *arr, size_t size, void (*f)(T *, size_t)) {
-		clock_t startTime = clock();
+	size_t check_time(T *arr, size_t size, void (*f)(T *, size_t)) {
+		auto startTime = std::chrono::high_resolution_clock::now();
 		f(arr, size);
-		clock_t endTime = clock();
-		std::cout << (check_arr(arr, 100) ? GREEN"[OK]" RESET : RED"[KO]" RESET) << std::endl;
-		return endTime - startTime;
+		auto endTime = std::chrono::high_resolution_clock::now();
+		return std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime).count();
 	}
 
 }
 
 int *create_int_arr(size_t size, int flags) {
+	std::random_device rd;
+	std::mt19937 mersenne(rd());
 	int *arr = new int[size];
-	char *c = new char[size];
 	for (int i = 0; i < size; ++i)
-		arr[i] = (!flags) ? ft::getRandomNumber(0, 9) : rand();
+		arr[i] = (flags == 0) ? static_cast<int>(mersenne() % 10) : static_cast<int>(mersenne());
 	return arr;
 }
 
@@ -206,50 +189,60 @@ char *create_char_arr(size_t size) {
 }
 
 int main() {
-	/* Size = 100 */
-	std::cout << "Bubble sort; size = 100 - " << ft::check_time(create_int_arr(100, 0), 100, ft::buble_sort) << std::endl;
-	std::cout << "Insertion sort; size = 100 - " << ft::check_time(create_int_arr(100, 0), 100, ft::insertion_sort) << std::endl;
-	std::cout << "Choice sort; size = 100 - " << ft::check_time(create_int_arr(100, 0), 100, ft::choice_sort) << std::endl;
-	std::cout << "Count sort; size = 100 - " << ft::check_time(create_int_arr(100, 0), 100, ft::count_sort) << std::endl;
-	std::cout << "Shell sort; size = 100 - " << ft::check_time(create_int_arr(100, 0), 100, ft::shell_sort) << std::endl;
-	std::cout << "Merge sort; size = 100 - " << ft::check_time(create_int_arr(100, 0), 100, ft::merge_sort) << std::endl;
-	std::cout << "Heap sort; size = 100 - " << ft::check_time(create_int_arr(100, 0), 100, ft::heap_sort) << std::endl;
-	std::cout << "Radix sort; size = 100 - " << ft::check_time(create_int_arr(100, 0), 100, ft::radix_sort) << std::endl;
-	/* Size = 1000 */
-	std::cout << "Bubble sort; size = 1000 - " << ft::check_time(create_int_arr(1000, 0), 100, ft::buble_sort) << std::endl;
-	std::cout << "Insertion sort; size = 1000 - " << ft::check_time(create_int_arr(1000, 0), 100, ft::insertion_sort) << std::endl;
-	std::cout << "Choice sort; size = 1000 - " << ft::check_time(create_int_arr(1000, 0), 100, ft::choice_sort) << std::endl;
-	std::cout << "Count sort; size = 1000 - " << ft::check_time(create_int_arr(1000, 0), 100, ft::count_sort) << std::endl;
-	std::cout << "Shell sort; size = 1000 - " << ft::check_time(create_int_arr(1000, 0), 100, ft::shell_sort) << std::endl;
-	std::cout << "Merge sort; size = 1000 - " << ft::check_time(create_int_arr(1000, 0), 100, ft::merge_sort) << std::endl;
-	std::cout << "Heap sort; size = 1000 - " << ft::check_time(create_int_arr(1000, 0), 100, ft::heap_sort) << std::endl;
-	std::cout << "Radix sort; size = 1000 - " << ft::check_time(create_int_arr(1000, 0), 100, ft::radix_sort) << std::endl;
-	/* Size = 10000 */
-	std::cout << "Bubble sort; size = 10000 - " << ft::check_time(create_int_arr(10000, 0), 100, ft::buble_sort) << std::endl;
-	std::cout << "Insertion sort; size = 10000 - " << ft::check_time(create_int_arr(10000, 0), 100, ft::insertion_sort) << std::endl;
-	std::cout << "Choice sort; size = 10000 - " << ft::check_time(create_int_arr(10000, 0), 100, ft::choice_sort) << std::endl;
-	std::cout << "Count sort; size = 10000 - " << ft::check_time(create_int_arr(10000, 0), 100, ft::count_sort) << std::endl;
-	std::cout << "Shell sort; size = 10000 - " << ft::check_time(create_int_arr(10000, 0), 100, ft::shell_sort) << std::endl;
-	std::cout << "Merge sort; size = 10000 - " << ft::check_time(create_int_arr(10000, 0), 100, ft::merge_sort) << std::endl;
-	std::cout << "Heap sort; size = 10000 - " << ft::check_time(create_int_arr(10000, 0), 100, ft::heap_sort) << std::endl;
-	std::cout << "Radix sort; size = 10000 - " << ft::check_time(create_int_arr(10000, 0), 100, ft::radix_sort) << std::endl;
-	/* Size = 100000 */
-	std::cout << "Bubble sort; size = 100000 - " << ft::check_time(create_int_arr(100000, 0), 100, ft::buble_sort) << std::endl;
-	std::cout << "Insertion sort; size = 100000 - " << ft::check_time(create_int_arr(100000, 0), 100, ft::insertion_sort) << std::endl;
-	std::cout << "Choice sort; size = 100000 - " << ft::check_time(create_int_arr(100000, 0), 100, ft::choice_sort) << std::endl;
-	std::cout << "Count sort; size = 100000 - " << ft::check_time(create_int_arr(100000, 0), 100, ft::count_sort) << std::endl;
-	std::cout << "Shell sort; size = 100000 - " << ft::check_time(create_int_arr(100000, 0), 100, ft::shell_sort) << std::endl;
-	std::cout << "Merge sort; size = 100000 - " << ft::check_time(create_int_arr(100000, 0), 100, ft::merge_sort) << std::endl;
-	std::cout << "Heap sort; size = 100000 - " << ft::check_time(create_int_arr(100000, 0), 100, ft::heap_sort) << std::endl;
-	std::cout << "Radix sort; size = 100000 - " << ft::check_time(create_int_arr(100000, 0), 100, ft::radix_sort) << std::endl;
-	/* Size = 1_000_000 */
-	std::cout << "Bubble sort; size = 1000000 - " << ft::check_time(create_int_arr(1000000, 0), 100, ft::buble_sort) << std::endl;
-	std::cout << "Insertion sort; size = 1000000 - " << ft::check_time(create_int_arr(1000000, 0), 100, ft::insertion_sort) << std::endl;
-	std::cout << "Choice sort; size = 1000000 - " << ft::check_time(create_int_arr(1000000, 0), 100, ft::choice_sort) << std::endl;
-	std::cout << "Count sort; size = 1000000 - " << ft::check_time(create_int_arr(1000000, 0), 100, ft::count_sort) << std::endl;
-	std::cout << "Shell sort; size = 1000000 - " << ft::check_time(create_int_arr(1000000, 0), 100, ft::shell_sort) << std::endl;
-	std::cout << "Merge sort; size = 1000000 - " << ft::check_time(create_int_arr(1000000, 0), 100, ft::merge_sort) << std::endl;
-	std::cout << "Heap sort; size = 1000000 - " << ft::check_time(create_int_arr(1000000, 0), 100, ft::heap_sort) << std::endl;
-	std::cout << "Radix sort; size = 1000000 - " << ft::check_time(create_int_arr(1000000, 0), 100, ft::radix_sort) << std::endl;
+	std::cout << GREEN"Test number range(0...9)" << RESET << std::endl;
+	for (size_t i = 100; i <= 100000; i *= 10) {
+		std::cout << "Size = " << i << std::endl;
+		std::cout << "Bubble sort - "
+				  << ft::check_time(create_int_arr(i, 0), i, ft::buble_sort) << std::endl;
+		std::cout << "Insertion sort - "
+				  << ft::check_time(create_int_arr(i, 0), i, ft::insertion_sort) << std::endl;
+		std::cout << "Choice sort - "
+				  << ft::check_time(create_int_arr(i, 0), i, ft::choice_sort) << std::endl;
+		std::cout << "Shell sort - "
+				  << ft::check_time(create_int_arr(i, 0), i, ft::shell_sort) << std::endl;
+		std::cout << "Merge sort - "
+				  << ft::check_time(create_int_arr(i, 0), i, ft::merge_sort) << std::endl;
+		std::cout << "Heap sort - "
+				  << ft::check_time(create_int_arr(i, 0), i, ft::heap_sort) << std::endl;
+		std::cout << "Radix sort - "
+				  << ft::check_time(create_int_arr(i, 0), i, ft::radix_sort) << std::endl;
+		std::cout << std::endl;
+	}
+	std::cout << GREEN"Test number range(INT32_MIN...INT32_MAX)" << RESET << std::endl;
+	for (size_t i = 100; i <= 100000; i *= 10) {
+		std::cout << "Size = " << i << std::endl;
+		std::cout << "Bubble sort - "
+				  << ft::check_time(create_int_arr(i, 1), i, ft::buble_sort) << std::endl;
+		std::cout << "Insertion sort - "
+				  << ft::check_time(create_int_arr(i, 1), i, ft::insertion_sort) << std::endl;
+		std::cout << "Choice sort - "
+				  << ft::check_time(create_int_arr(i, 1), i, ft::choice_sort) << std::endl;
+		std::cout << "Shell sort - "
+				  << ft::check_time(create_int_arr(i, 1), i, ft::shell_sort) << std::endl;
+		std::cout << "Merge sort - "
+				  << ft::check_time(create_int_arr(i, 1), i, ft::merge_sort) << std::endl;
+		std::cout << "Heap sort - "
+				  << ft::check_time(create_int_arr(i, 1), i, ft::heap_sort) << std::endl;
+		std::cout << std::endl;
+	}
+	std::cout << GREEN"Test char range(97...122)" << RESET << std::endl;
+	for (size_t i = 100; i <= 100000; i *= 10) {
+		std::cout << "Size = " << i << std::endl;
+		std::cout << "Bubble sort - "
+				  << ft::check_time(create_char_arr(i), i, ft::buble_sort) << std::endl;
+		std::cout << "Insertion sort - "
+				  << ft::check_time(create_char_arr(i), i, ft::insertion_sort) << std::endl;
+		std::cout << "Choice sort - "
+				  << ft::check_time(create_char_arr(i), i, ft::choice_sort) << std::endl;
+		std::cout << "Shell sort - "
+				  << ft::check_time(create_char_arr(i), i, ft::shell_sort) << std::endl;
+		std::cout << "Merge sort - "
+				  << ft::check_time(create_char_arr(i), i, ft::merge_sort) << std::endl;
+		std::cout << "Heap sort - "
+				  << ft::check_time(create_char_arr(i), i, ft::heap_sort) << std::endl;
+		std::cout << "Radix sort - "
+				  << ft::check_time(create_char_arr(i), i, ft::radix_sort) << std::endl;
+		std::cout << std::endl;
+	}
 	return 0;
 }

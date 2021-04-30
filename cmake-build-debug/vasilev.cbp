@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/flavon/Desktop/vasilev/cmake-build-debug"/>
+				<Option working_dir="/Users/flavon/Desktop/sort/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/flavon/Desktop/vasilev/cmake-build-debug"/>
+				<Option working_dir="/Users/flavon/Desktop/sort/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/flavon/Desktop/vasilev/cmake-build-debug"/>
+				<Option working_dir="/Users/flavon/Desktop/sort/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="vasilev">
-				<Option output="/Users/flavon/Desktop/vasilev/cmake-build-debug/vasilev" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/flavon/Desktop/vasilev/cmake-build-debug"/>
+				<Option output="/Users/flavon/Desktop/sort/cmake-build-debug/vasilev" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/flavon/Desktop/sort/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 vasilev"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 vasilev"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="vasilev/fast">
-				<Option output="/Users/flavon/Desktop/vasilev/cmake-build-debug/vasilev" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/flavon/Desktop/vasilev/cmake-build-debug"/>
+				<Option output="/Users/flavon/Desktop/sort/cmake-build-debug/vasilev" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/flavon/Desktop/sort/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,17 +73,17 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 vasilev/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/vasilev/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 vasilev/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/flavon/Desktop/sort/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/flavon/Desktop/vasilev/main.cpp">
+		<Unit filename="/Users/flavon/Desktop/sort/main.cpp">
 			<Option target="vasilev"/>
 		</Unit>
-		<Unit filename="/Users/flavon/Desktop/vasilev/CMakeLists.txt">
+		<Unit filename="/Users/flavon/Desktop/sort/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -1,3 +1,3 @@
-/Users/flavon/Desktop/vasilev/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/flavon/Desktop/vasilev/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/flavon/Desktop/vasilev/cmake-build-debug/CMakeFiles/vasilev.dir
+/Users/flavon/Desktop/sort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/flavon/Desktop/sort/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/flavon/Desktop/sort/cmake-build-debug/CMakeFiles/vasilev.dir
